@@ -3,6 +3,33 @@
 }
 
 div.m {
-  width: 100%;
   padding: 0 1em; 
+}
+
+div.header {
+  border-bottom: 1px solid black; 
+}
+
+div.hdr-r {
+  text-align: right; 
+}
+
+div.hdr-l {
+  text-align: left; 
+}
+
+div.sep {
+  height: 1.25em; 
+}
+
+h1.u,h2.u {
+  font-variant: small-caps; 
+}
+
+h1.v {
+}
+
+a {
+  color: #000; 
+  font-weight: inherit; 
 }

@@ -1,0 +1,18 @@
+{{if eq .Type "u"}}
+  <div class="single-header hdr-l">
+    <h1 class="u">Evan DiBona</h1>
+    {{with .Lastmod}}
+      <h2>{{ dateFormat "Monday, January 2, 2006" .}}</h2>
+    {{end}}
+  </div>
+{{else}}
+  <div class="single-header hdr-r">
+    <h1 class="v">Evan Charles DiBona</h1>
+    {{with .Lastmod}}
+      <h2>{{ dateFormat "Monday, January 2, 2006" .}}</h2>
+    {{end}}
+  </div>
+{{end}}
+
+<div class="sep">
+</div>

@@ -1,6 +1,6 @@
 {{define "main"}}
+{{- partial "header.html" . -}}
 <div class="article">
-  {{with .Title}}<h1>{{.}}</h1>{{end}}
   {{with .Content}}{{.}}{{end}}
 </div>
 <div class="toc">
@@ -8,7 +8,7 @@
     {{range .Pages}}
       <li><b>
           <a href="{{.RelPermalink}}">
-          {{.Title}}
+          {{.Title}} ... {{.File.BaseFileName}}
         </a>
       </b></li>
     {{end}}

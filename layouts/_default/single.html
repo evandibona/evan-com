@@ -1,13 +1,10 @@
 {{define "main"}}
+{{- partial "single-header.html" . -}}
   <div class="article">
-    <h1><i>single page</i></h1>
     {{with .Title}}
       <h1>{{.}}</h1>
     {{end}}
 
-    {{with .Lastmod}}
-      <h2>{{ dateFormat "Saturday, June 25, 2022" .}}</h2>
-    {{end}}
     {{with .Content}}
       {{.}}
     {{end}}

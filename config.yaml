@@ -6,3 +6,9 @@ title: Evan
 disableKinds:
   - taxonomy
   - term
+security:
+  exec:
+    allow:
+    - ^vim
+    osEnv:
+    - .*
