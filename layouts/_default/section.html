@@ -8,7 +8,15 @@
     {{range .Pages}}
       <li><b>
           <a href="{{.RelPermalink}}">
-          {{.Title}} ... {{.File.BaseFileName}}
+          {{ if in .File.BaseFileName "index" }}
+            {{.Title}}
+          {{else}}
+            {{ if in .CurrentSection "/u/now/" }}
+            {{dateFormat "1/2/06" .Date}} ... {{.File.BaseFileName}}
+            {{else}}
+            {{dateFormat "1/2/06" .Date}} {{.Title}} ... {{.File.BaseFileName}}
+            {{end}}
+          {{end}}
         </a>
       </b></li>
     {{end}}

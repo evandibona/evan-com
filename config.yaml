@@ -6,6 +6,12 @@ title: Evan
 disableKinds:
   - taxonomy
   - term
+markup:
+  goldmark:
+    extensions:
+    renderer:
+      unsafe: true
+    
 security:
   exec:
     allow:

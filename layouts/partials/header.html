@@ -1,11 +1,13 @@
 {{if eq .Type "u"}}
   <div class="header hdr-l">
-    {{with .Params.subtitle}}<h1 class="u">{{.}}</h1>{{end}}
+    <h2 class="u">Evan DiBona</h2>
+    {{with .Title}}<h2 class="u">{{.}}</h2>{{end}}
     {{with .Date}}<h3>{{dateFormat "January 2, 2006" .}}</h3>{{end}}
   </div>
 {{else}}
   <div class="header hdr-r">
-    {{with .Params.subtitle}}<h1 class="v">{{.}}</h1>{{end}}
+    <h2 class="v">Evan Charles DiBona</h2>
+    {{with .Title}}<h2 class="v">{{.}}</h2>{{end}}
     {{with .Date}}<h3>{{dateFormat "January 2, 2006" .}}</h3>{{end}}
   </div>
 {{end}}

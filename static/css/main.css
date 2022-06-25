@@ -33,3 +33,7 @@ a {
   color: #000; 
   font-weight: inherit; 
 }
+
+footer {
+  height: 4em; 
+}
