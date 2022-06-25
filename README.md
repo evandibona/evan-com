@@ -23,3 +23,5 @@ evandibona.com
 		/lglr
 		/now
 ```
+
+*Note: use 'hugo server --bind='*
