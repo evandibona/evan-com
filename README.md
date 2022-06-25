@@ -12,11 +12,11 @@ So the structure will roughly be:
 
 ```
 evandibona.com
-	/u							Public
+	/u	(Public)
 		/cmty
 		/ntry
 		/now
-	/v							Private
+	/v	Private
 		/abio
 		/febk
 		/lbry
