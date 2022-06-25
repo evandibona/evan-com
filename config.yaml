@@ -1,0 +1,8 @@
+baseURL: http://173.82.237.203:1313/
+params:
+  AuthorName: Evan DiBona
+languageCode: en-us
+title: Evan
+disableKinds:
+  - taxonomy
+  - term
