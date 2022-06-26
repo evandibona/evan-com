@@ -1,3 +1,11 @@
 {{define "main"}}
-  {{with .Content}}<div id="splash">{{.}}</div>{{end}}
+  {{with .Content}}
+    <div id="splash">
+      {{.}}
+      {{with partial "qotd.html"}}
+        <bq class="splash">{{.}}</bq>
+      {{end}}
+    </div>
+  {{end}}
 {{end}}
+

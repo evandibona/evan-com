@@ -1,6 +1,5 @@
 ---
-title: "Public"
-subtitle: "Evan DiBona"
+title: "Aspiring Notary Public & Signing Agent"
 Date: "2022-06-26"
 ---
 

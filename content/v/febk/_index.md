@@ -9,4 +9,4 @@ Perhaps in time I'll be able to revisit this project and outsource the binding. 
 
 So for now I'll leave my version here, in case anyone finds it pleasant to read.
 
-[Zetetic Astronomy](/doc/zet.pdf)
+[Zetetic Astronomy (PDF)](/doc/zet.pdf)

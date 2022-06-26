@@ -1,3 +1,3 @@
 #!/bin/sh
 
-hugo && rsync -avz --delete-after public/* edibona_evan@ssh.phx.nearlyfreespeech.net:/home/public/.
+/usr/local/bin/hugo >> log && /usr/bin/rsync -avz --delete-after public/* edibona_evan@ssh.phx.nearlyfreespeech.net:/home/public/. >> log

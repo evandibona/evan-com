@@ -1,9 +1,13 @@
 {{if eq .Type "u"}}
   <div class="header hdr-l">
-    <h2 class="u">Evan DiBona</h2>
+    <h1 class="u">
+      <a href="/u" class="n">Evan DiBona</a>
+    </h1>
 {{else}}
   <div class="header hdr-r">
-    <h2 class="v">Evan Charles DiBona</h2>
+    <h1 class="v">
+      <a href="/v" class="n">Evan Charles DiBona</a>
+    </h1>
 {{end}}
 
 {{if eq .Kind "page"}}
@@ -12,15 +16,9 @@
   {{else}}
     {{with .Title}}<h2 class="v">{{.}}</h2>{{end}}
   {{end}}
-  {{with .Date}}
-    <h3>{{dateFormat "Monday, January 2, 2006" .}}</h3>
-  {{end}}
 {{end}}
 {{if eq .Kind "section"}}
-  {{with .Title}}<h2 class="v">{{.}}</h2>{{end}}
-  {{with .Date}}
-    <h3>{{dateFormat "January 2, 2006" .}}</h3>
-  {{end}}
+  {{with .Title}}<h2>{{.}}</h2>{{end}}
 {{end}}
 
   </div>

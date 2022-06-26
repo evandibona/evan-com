@@ -1,38 +1,78 @@
+/*  COLORS
+ * Sand Dollar  Dark Gray #6B5852
+ * Spearmint    Blue      #8CBBBD
+ * Cinnabar     Red       #F56C66
+ * Ivory        Off-White #F6F0E7
+ * */
+
+
+body {
+  color: #6B5852;
+  background: #F6F0E7; 
+  font-size: 1.1em; 
+}
+
 #splash {
   text-align: center;
 }
 
+bq.splash {   font-size: 1.5em; }
+bq.splash i { font-size: 0.85em; }
+
+
 div.m {
   padding: 0 1em; 
+  max-width: 920px; 
+  margin: 0 auto;
 }
 
 div.header {
-  border-bottom: 1px solid black; 
-}
-
-div.hdr-r {
-  text-align: right; 
+  margin: 1em 0; 
+  border-bottom: 0.2em solid #6B585278; 
 }
 
 div.hdr-l {
   text-align: left; 
 }
 
+div.hdr-r {
+  text-align: right; 
+}
+
 div.sep {
   height: 1.25em; 
 }
 
-h1.u,h2.u {
+span.square-blue {
+  padding: 0 0.4em;
+  background: #8CBBBD; 
+}
+
+span.square-red {
+  padding: 0 0.4em;
+  background: #F56C66; 
+}
+
+div.header h1 { letter-spacing: 0.05em; }
+div.header h1,h2,h3 {
+  margin: 0.12em 0;
+}
+
+h1.u,h2.u, h3.u {
   font-variant: small-caps; 
 }
 
-h1.v {
+h1.v, h2.v, h3.v {
 }
 
 a {
   color: #000; 
   font-weight: inherit; 
 }
+a.n { text-decoration: none; }
+
+.toc ul { list-style-type: none; }
+.toc ul li { margin: 0.5em 0; }
 
 footer {
   height: 4em; 
