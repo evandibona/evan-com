@@ -1,16 +1,29 @@
 {{if eq .Type "u"}}
   <div class="header hdr-l">
     <h2 class="u">Evan DiBona</h2>
-    {{with .Title}}<h2 class="u">{{.}}</h2>{{end}}
-    {{with .Date}}<h3>{{dateFormat "January 2, 2006" .}}</h3>{{end}}
-  </div>
 {{else}}
   <div class="header hdr-r">
     <h2 class="v">Evan Charles DiBona</h2>
-    {{with .Title}}<h2 class="v">{{.}}</h2>{{end}}
-    {{with .Date}}<h3>{{dateFormat "January 2, 2006" .}}</h3>{{end}}
-  </div>
 {{end}}
+
+{{if eq .Kind "page"}}
+  {{if in .File.Dir "u/now/"}}
+    <h2 class="v">Now</h2>
+  {{else}}
+    {{with .Title}}<h2 class="v">{{.}}</h2>{{end}}
+  {{end}}
+  {{with .Date}}
+    <h3>{{dateFormat "Monday, January 2, 2006" .}}</h3>
+  {{end}}
+{{end}}
+{{if eq .Kind "section"}}
+  {{with .Title}}<h2 class="v">{{.}}</h2>{{end}}
+  {{with .Date}}
+    <h3>{{dateFormat "January 2, 2006" .}}</h3>
+  {{end}}
+{{end}}
+
+  </div>
 
 <div class="sep">
 </div>
