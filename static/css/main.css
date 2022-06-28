@@ -84,7 +84,16 @@ a {
 a.n { text-decoration: none; }
 
 .toc ul { list-style-type: none; }
-.toc ul li { margin: 0.5em 0; }
+
+/* csslayout.io/dot-leader/ */
+.toc ul li.dotted { 
+  width: 80%; 
+  margin: 0 0 0.75em 0;
+  border-bottom: 1px dashed black; 
+}
+.toc .flex { flex: 1 0; }
+.toc li.dotted a { text-decoration: none; }
+.toc li.dotted b { display: flex; }
 
 footer {
   height: 4em; 
