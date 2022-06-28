@@ -16,8 +16,20 @@ body {
   text-align: center;
 }
 
+#splash a { text-decoration: none; }
+#splash .header { border-bottom: 1px solid gray; }
+
 bq.splash {   font-size: 1.5em; }
 bq.splash i { font-size: 0.85em; }
+
+img.portrait {
+  padding: 0.5em 0; 
+  margin: -1em auto; 
+  width: 60%; 
+  mix-blend-mode: darken; 
+  filter: contrast(1.3);
+}
+
 
 
 div.m {
@@ -28,7 +40,7 @@ div.m {
 
 div.header {
   margin: 1em 0; 
-  border-bottom: 0.2em solid #6B585278; 
+  border-bottom: 2px solid #6B585278; 
 }
 
 div.hdr-l {
