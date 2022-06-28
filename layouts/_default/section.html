@@ -5,20 +5,24 @@
 </div>
 <div class="toc">
   <ul>
-    {{range .Pages}}
-      <li><b>
-          <a href="{{.RelPermalink}}">
-          {{ if in .File.BaseFileName "index" }}
-            {{.Title}}
+    {{if lt (len .File.Dir) 3}}
+      <!-- Alphabetical -->
+      {{range .Pages.ByLinkTitle}}
+        <li><b><a href="{{.RelPermalink}}">{{.Title}}</a></b></li>
+      {{end}}
+    {{else}}
+      <!-- Reverse Numeric -->
+      {{range .Pages.ByLinkTitle.Reverse}}
+        <li><b><a href="{{.RelPermalink}}">
+          {{if in .CurrentSection "/u/now/"}}
+            {{dateFormat "1/2/06" .Date}}
+              ... {{.File.BaseFileName}}
           {{else}}
-            {{ if in .CurrentSection "/u/now/" }}
-            {{dateFormat "1/2/06" .Date}} ... {{.File.BaseFileName}}
-            {{else}}
-            {{dateFormat "1/2/06" .Date}} {{.Title}} ... {{.File.BaseFileName}}
-            {{end}}
+            {{dateFormat "1/2/06" .Date}} {{.Title}}
+              ... {{.File.BaseFileName}}
           {{end}}
-        </a>
-      </b></li>
+        </a></b></li>
+      {{end}}
     {{end}}
   </ul>
 </div>

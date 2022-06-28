@@ -11,6 +11,9 @@ body {
   background: #F6F0E7; 
   font-size: 1.1em; 
 }
+h1 { font-size: 1.5em }
+h2 { font-size: 1.25em }
+h3 { font-size: 1.1em }
 
 #splash {
   text-align: center;
@@ -39,16 +42,7 @@ div.m {
 }
 
 div.header {
-  margin: 1em 0; 
-  border-bottom: 2px solid #6B585278; 
-}
-
-div.hdr-l {
-  text-align: left; 
-}
-
-div.hdr-r {
-  text-align: right; 
+  margin: 0.25em 0; 
 }
 
 div.sep {
@@ -69,12 +63,18 @@ div.header h1 { letter-spacing: 0.05em; }
 div.header h1,h2,h3 {
   margin: 0.12em 0;
 }
+div.title h1 {
+  text-decoration: underline; 
+  text-align: center; 
+}
 
 h1.u,h2.u, h3.u {
+  text-align: left; 
   font-variant: small-caps; 
 }
 
 h1.v, h2.v, h3.v {
+  text-align: right; 
 }
 
 a {

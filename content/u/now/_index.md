@@ -1,9 +1,11 @@
 ---
 title: "Now"
-date: 2022-06-25T17:03:24-04:00
+date: 2022-06-27
 ---
 
+Probably being slightly overwhelmed by my limited free time and the long list of requirements to become a signing agent. 
 
-Right now, this week, I'm working on getting a new personal website up and running. 
+Hopefully taking some time to study law suits in N.C.
 
-*decided to give Derek Sivers' idea a shot*
+Maybe going for long walks.
+
