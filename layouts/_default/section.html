@@ -7,7 +7,7 @@
   <ul>
     {{if lt (len .File.Dir) 3}}
       <!-- Alphabetical -->
-      {{range .Pages.ByLinkTitle}}
+      {{range .Pages.ByLastmod.Reverse}}
         <li><b><a href="{{.RelPermalink}}">{{.Title}}</a></b></li>
       {{end}}
     {{else}}
@@ -16,11 +16,12 @@
         <li class="dotted"><b><a href="{{.RelPermalink}}">
           {{if in .CurrentSection "/u/now/"}}
             {{dateFormat "1/2/06" .Date}}</a>
-              <span class="flex"></span>
-              {{.File.BaseFileName}}
+            <span class="flex"></span>
+            {{.File.BaseFileName}}
           {{else}}
-            {{dateFormat "1/2/06" .Date}} {{.Title}}</a>
-              <span class="flex"></span>
+            {{dateFormat "1/2/06" .Date}} 
+            <span class="tab"></span> {{.Title}}</a>
+            <span class="flex"></span>
             {{.File.BaseFileName}}
           {{end}}
         </a></b></li>
