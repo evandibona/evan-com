@@ -1,8 +1,12 @@
 {{define "main"}}
-{{- partial "header.html" . -}}
-<div class="article">
+{{if ne .Params.complex true}}
+  {{- partial "header.html" . -}}
+  <div class="article">
+    {{with .Content}}{{.}}{{end}}
+  </div>
+{{else}}
   {{with .Content}}{{.}}{{end}}
-</div>
+{{end}}
 <div class="toc">
   <ul>
     {{if lt (len .File.Dir) 3}}

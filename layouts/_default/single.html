@@ -1,11 +1,9 @@
 {{define "main"}}
+
 {{- partial "header.html" . -}}
   <div class="article">
     {{if in .File.Path "u/now/"}}
     {{else}}
-      {{with .Title}}
-        <h1>{{.}}</h1>
-      {{end}}
     {{end}}
 
     {{with .Content}}
