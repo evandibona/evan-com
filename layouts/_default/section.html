@@ -1,22 +1,18 @@
 {{define "main"}}
-{{if ne .Params.complex true}}
-  {{- partial "header.html" . -}}
-  <div class="article">
-    {{with .Content}}{{.}}{{end}}
-  </div>
-{{else}}
-  {{with .Content}}{{.}}{{end}}
-{{end}}
+{{- partial "header.html" . -}}
+<div class="article">
+  {{with .Page.Content}}{{.}}{{end}}
+</div>
 <div class="toc">
   <ul>
     {{if lt (len .File.Dir) 3}}
       <!-- Alphabetical -->
-      {{range .Pages.ByLastmod.Reverse}}
+      {{range .Pages}}
         <li><b><a href="{{.RelPermalink}}">{{.Title}}</a></b></li>
       {{end}}
     {{else}}
       <!-- Reverse Numeric -->
-      {{range .Pages.ByLinkTitle.Reverse}}
+      {{range (sort .Pages "File.Path").Reverse}}
         <li class="dotted"><b><a href="{{.RelPermalink}}">
           {{if in .CurrentSection "/u/now/"}}
             {{dateFormat "1/2/06" .Date}}</a>
