@@ -13,18 +13,27 @@
     {{else}}
       <!-- Reverse Numeric -->
       {{range (sort .Pages "File.Path").Reverse}}
-        <li class="dotted"><b><a href="{{.RelPermalink}}">
+        <li class="dotted"><b>
+          <a class="toc-dt" href="{{.RelPermalink}}">
           {{if in .CurrentSection "/u/now/"}}
-            {{dateFormat "1/2/06" .Date}}</a>
+              <span class="toc-date">
+                {{dateFormat "1/2/06" .Date}}
+              </span>
+            </a>
             <span class="flex"></span>
             {{.File.BaseFileName}}
           {{else}}
-            {{dateFormat "1/2/06" .Date}} 
-            <span class="tab"></span> {{.Title}}</a>
-            <span class="flex"></span>
+            <span class="toc-date">
+              {{dateFormat "1/2/06" .Date}} 
+            </span>
+            <span class="toc-title">
+              {{.Title}}
+            </span>
+            </a>
+              <span class="flex"></span>
             {{.File.BaseFileName}}
           {{end}}
-        </a></b></li>
+        </b></li>
       {{end}}
     {{end}}
   </ul>

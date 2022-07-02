@@ -109,6 +109,16 @@ a.n { text-decoration: none; }
   margin: 0 0 0.75em 0;
   border-bottom: 1px dashed black; 
 }
+.toc-dt {
+  min-width: 12em; 
+}
+.toc-date {
+  width: 4em; 
+}
+.toc-title {
+  overflow: hidden; 
+  white-space: nowrap; 
+}
 .toc .flex { flex: 1 0; }
 .toc li.dotted a { 
 text-decoration: none;
