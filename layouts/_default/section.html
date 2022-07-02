@@ -7,33 +7,35 @@
   <ul>
     {{if lt (len .File.Dir) 3}}
       <!-- Alphabetical -->
-      {{range .Pages}}
+      {{range .Pages.ByDate.Reverse}}
         <li><b><a href="{{.RelPermalink}}">{{.Title}}</a></b></li>
       {{end}}
     {{else}}
       <!-- Reverse Numeric -->
       {{range (sort .Pages "File.Path").Reverse}}
-        <li class="dotted"><b>
-          <a class="toc-dt" href="{{.RelPermalink}}">
+        <li class="dotted">
+          <a href="{{.RelPermalink}}">
           {{if in .CurrentSection "/u/now/"}}
-              <span class="toc-date">
+              <span class="toc-title">
                 {{dateFormat "1/2/06" .Date}}
               </span>
+              <span class="toc-file">
+                {{.File.BaseFileName}}
+              </span>
             </a>
-            <span class="flex"></span>
-            {{.File.BaseFileName}}
           {{else}}
-            <span class="toc-date">
-              {{dateFormat "1/2/06" .Date}} 
-            </span>
-            <span class="toc-title">
-              {{.Title}}
-            </span>
+              <span class="toc-date">
+                {{dateFormat "1/2/06" .Date}} 
+              </span>
+              <span class="toc-title">
+                {{.Title}}
+              </span>
+              <span class="toc-file">
+                {{.File.BaseFileName}}
+              </span>
             </a>
-              <span class="flex"></span>
-            {{.File.BaseFileName}}
           {{end}}
-        </b></li>
+        </li>
       {{end}}
     {{end}}
   </ul>

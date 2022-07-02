@@ -1,11 +1,11 @@
 ---
 title: "Now"
-date: 2022-06-27
+date: 2022-07-02
 ---
 
-Probably being slightly overwhelmed by my limited free time and the long list of requirements to become a signing agent. 
+Saturday!
 
-Hopefully taking some time to study law suits in N.C.
+Notary Application to submit, walks to take. 
 
-Maybe going for long walks.
+Besides working on my Notary education, I'm keeping an eye open for land to purchase. Either an affordable long term lease or something I can get a loan for. 
 

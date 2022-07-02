@@ -108,23 +108,44 @@ a.n { text-decoration: none; }
   width: 80%; 
   margin: 0 0 0.75em 0;
   border-bottom: 1px dashed black; 
+  font-weight: 600; 
 }
-.toc-dt {
-  min-width: 12em; 
+li.dotted a {
+  display: inline-block; 
+  width: 100%; 
 }
 .toc-date {
-  width: 4em; 
+  display: inline-block; 
+  width: 3.5em; 
 }
 .toc-title {
-  overflow: hidden; 
-  white-space: nowrap; 
+  display: inline-block; 
 }
+.toc-file {
+  float: right; 
+}
+@media screen and (max-width: 535px) {
+  .toc-date {
+    visibility: hidden; 
+    width: 0em; 
+  }
+}
+@media screen and (max-width: 380px) {
+  .toc-title {
+    max-width: 9em; 
+    overflow: hidden; 
+    white-space: nowrap; 
+  }
+  span.toc-file::before{
+    content: "... "
+  }
+}
+
 .toc .flex { flex: 1 0; }
 .toc li.dotted a { 
 text-decoration: none;
   flex: 1 1;
 }
-.toc li.dotted b { display: flex; }
 
 footer {
   height: 4em; 
