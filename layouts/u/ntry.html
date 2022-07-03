@@ -1,99 +1,25 @@
 {{define "main"}}
-  <!-- {{- partial "header.html" . -}} -->
-  <div class="article">
-    <!-- {{with .Page.Content}}{{.}}{{end}} -->
-    <h1> </h1>
-  </div>
-  <div class="article">
-    <h1> Who I Am. </h1>
-    <i> see <a href="/u/res/">/u/res/</a> </i>
-    <p>
-      Of course a resume is only part of the big picture. 
-      My sights are set on signing agent work in the long run.
-      Right now though, I am trying to learn as much about
-      this office as I can. Because I want to be able to 
-      provide the most informed Notary services as I can.
-    </p>
-    <p>
-      So if I don't know you yet, get in touch. I'll be providing 
-      <i>very</i> discounted services for a month or two. 
-    </p>
-  </div>
-  <div class="article">
-    <h1> What I Do. </h1>
-    <p>
-      At the moment I am focusing on General Notary Work
-      such as affidavits, private contract signings, 
-      and other forms of acknowledgements and Oaths/Affirmations. 
-    </p>
-    <p>
-      It is also my intention to educate myself on as many 
-      topics as possible so that I may point my clients in the 
-      right direction  for getting answers on the documents they 
-      may be drafting. 
-    </p>
-  </div>
-  <div class="article">
-    <h1> Where To Start </h1>
-    <p> 
-      Here I will provide links to Alphonse's stuff.
-      agenda31 common law ID.
-      <a href="https://www.sosnc.gov/documents/forms/authentications/sample_documents/true_copy.pdf">
-        True Copy
-      </a>
-        
+  <h1>{{.Title}}</h1>
 
-      A photograph with certificate. 
-      Certificate templates. 
-    </p>
+  <div class="pure-g">  
+    <!-- Main Info -->
+    <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3 article">
+      <h1>{{(.GetPage "/u/about").Title}}</h1>
+      {{(.GetPage "/u/about").Content}}
+    </div>
+    <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3 article">
+      <h1> {{(.GetPage "/u/ntry/2").Title}}</h1>
+      {{(.GetPage "/u/ntry/2").Content}}
+      <h1> {{(.GetPage "/u/ntry/8").Title}} </h1>
+      {{(.GetPage "/u/ntry/8").Content}}
+    </div>
+    <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3 article">
+      <h1> {{(.GetPage "/u/ntry/9").Title}} </h1>
+      <p> {{(.GetPage "/u/ntry/9").Content}} </p>
+      {{partial "contact" .}}
+      <h1> Index </h1>
+      {{partial "ntry-index" .}}
+    </div>
   </div>
-  <div class="article">
-    <h1> Services </h1>
-    <p>
-      All General Notary Work are services which I aim to provide.
-      <br>
-      <i> see <a href="/u/ntry/2">/u/ntry/2/</a> </i>
-    </p>
-    <p>
-      Driving, mobile notary. 
-      In order to get some experience and exposure, 
-      I will be offering free mobile notary services 
-      for a limited time. 
-    </p>
-  </div>
-  <div class="article">
-    <h1> Availability </h1>
-    <p>
-      Currently I am only available on the weekends. 
-      Most times can work, just schedule with me in advance. 
-      Or call and I'll let you know if I'm available. 
-    </p>
-    <p>
-      This is a part time occupation for me. 
-      As I dip my toes into Notary work it will continue to be 
-      that way for some time. However my plan is to take this 
-      fairly seriously and move into more profitable 
-      signing agent work. 
-    </p>
-  </div>
-  <div class="toc">
-    <h1> Table of Contents </h1>
-    <ul>
-    {{range (sort .Pages "File.Path").Reverse}}
-      <li class="dotted">
-        <a href="{{.RelPermalink}}">
-          <span class="toc-date">
-            {{dateFormat "1/2/06" .Date}} 
-          </span>
-          <span class="toc-title">
-            {{.Title}}
-          </span>
-          <span class="toc-file">
-            {{.File.BaseFileName}}
-          </span>
-        </a>
-      </li>
-    {{end}}
-    </ul>
-  </div>
+
 {{end}}

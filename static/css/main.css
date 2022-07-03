@@ -6,13 +6,22 @@
  * */
 
 
+/*** LAYOUT ***/
 body {
   background: #F6F0E7;
   color: #6B5852;
-  font-family: serif; 
-  font-size: 1.25em; 
-  letter-spacing: 0.5px; 
+  text-align: justify; 
 }
+
+.pure-g > div {
+  box-sizing: border-box; 
+}
+
+.article {
+  padding: 0 0.5em; 
+}
+
+/*** FONTS ***/
 
 @font-face {
   font-family: fell-french;
@@ -23,6 +32,9 @@ body {
   src: url('/fonts/FeFCsc2.ttf');
 }
 
+.center   { text-align: center; }
+.sc       { font-variant: small-caps; }
+
 h1, h2, h3 { font-family: fell-french; }
 h1 { font-size: 1.5em }
 h2 { font-size: 1.25em }
@@ -32,7 +44,7 @@ h3 { font-size: 1.1em }
   text-align: center;
 }
 
-#splash a { text-decoration: none; }
+#splash a {  }
 #splash .header { border-bottom: 1px solid gray; }
 
 bq.splash {   font-size: 1.25em; }
@@ -46,14 +58,34 @@ img.portrait {
   padding: 0.5em 0; 
   margin: -1em auto; 
   width: 60%; 
+  max-width: 16em; 
 }
 
 
+/*** LINKS ***/
+
+a {
+  color: #000; 
+  font-weight: inherit; 
+  text-decoration: none; 
+}
+a.n { background: none;  }
+.article a:link    { background: #6B585230; }
+.article a:hover   { background: #6B5852; color: #F6F0E7; }
+
+
+
+/*  COLORS
+ * Sand Dollar  Dark Gray #6B5852
+ * Spearmint    Blue      #8CBBBD
+ * Cinnabar     Red       #F56C66
+ * Ivory        Off-White #F6F0E7
+ * */
 
 div.m {
   padding: 0 1em; 
-  max-width: 920px; 
   margin: 0 auto;
+  /*max-width: 920px;*/
 }
 
 div.header {
@@ -82,7 +114,6 @@ div.header h1,h2,h3 {
   margin: 0.12em 0;
 }
 div.title h1 {
-  /*text-decoration: underline;*/
   text-align: center; 
 }
 
@@ -94,12 +125,6 @@ h1.u,h2.u, h3.u {
 h1.v, h2.v, h3.v {
   text-align: right; 
 }
-
-a {
-  color: #000; 
-  font-weight: inherit; 
-}
-a.n { text-decoration: none; }
 
 .toc ul { list-style-type: none; }
 
@@ -124,27 +149,48 @@ li.dotted a {
 .toc-file {
   float: right; 
 }
+
+
+.pure-g [class*=pure-u] {
+  font-family: serif; 
+  font-size: 1.25em; 
+  letter-spacing: 0.4px; 
+}
 @media screen and (max-width: 535px) {
+  .pure-g [class*=pure-u] {
+    font-family: serif; 
+    font-size: 1.2em; 
+    letter-spacing: 0px; 
+  }
   .toc-date {
     visibility: hidden; 
     width: 0em; 
   }
+  body {
+  }
 }
 @media screen and (max-width: 380px) {
   .toc-title {
-    max-width: 9em; 
+    max-width: 8.5em; 
     overflow: hidden; 
     white-space: nowrap; 
   }
   span.toc-file::before{
     content: "... "
   }
+  .article { padding: 0; }
 }
 
 .toc .flex { flex: 1 0; }
 .toc li.dotted a { 
-text-decoration: none;
+  background: none; 
   flex: 1 1;
+}
+
+img.contact {
+  max-height: 1.8em; 
+  opacity: 0.5; 
+  display: inline-block; 
 }
 
 footer {
@@ -155,4 +201,17 @@ footer {
 /***** NOTARY PAGE *****/
 /***********************/
 
+
+/*** TABLES ***/
+.c   { margin: 0 auto; }
+.pure-table {
+  border: none; 
+  border-right: 1px solid #6B585240;
+}
+.pure-table td, .pure-table th {
+  border-left: 1px solid #6B585240;
+}
+.pure-table-odd td {
+  background: #6B585240;
+}
 

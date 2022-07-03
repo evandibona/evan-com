@@ -1,0 +1,47 @@
+  <!-- Table of Contents -->
+
+  <div class="toc">
+    <ul>
+    {{range (sort .Pages "File.Path").Reverse}}
+      <li class="dotted">
+        <a href="{{.RelPermalink}}">
+          <span class="toc-date">
+            {{dateFormat "1/2/06" .Date}} 
+          </span>
+          <span class="toc-title">
+            {{.Title}}
+          </span>
+          <span class="toc-file">
+            {{.File.BaseFileName}}
+          </span>
+        </a>
+      </li>
+    {{end}}
+      <li class="dotted">
+        <a href="/u/res">
+          <span class="toc-date">
+            {{dateFormat "1/2/06" (.GetPage "/u/res").Date}}
+          </span>
+          <span class="toc-title">
+            {{(.GetPage "/u/res").Title}}
+          </span>
+          <span class="toc-file">
+            res
+          </span>
+        </a>
+      </li>
+      <li class="dotted">
+        <a href="/u/about">
+          <span class="toc-date">
+            {{dateFormat "1/2/06" (.GetPage "/u/about").Date}}
+          </span>
+          <span class="toc-title">
+            {{(.GetPage "/u/about").Title}}
+          </span>
+          <span class="toc-file">
+            about
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
