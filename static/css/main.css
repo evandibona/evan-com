@@ -85,7 +85,7 @@ a.n { background: none;  }
 div.m {
   padding: 0 1em; 
   margin: 0 auto;
-  /*max-width: 920px;*/
+  max-width: 920px;
 }
 
 div.header {
@@ -115,6 +115,10 @@ div.header h1,h2,h3 {
 }
 div.title h1 {
   text-align: center; 
+}
+.ln-title {
+  margin: 1em 0; 
+  border-bottom: 1.5px solid #6B585260;
 }
 
 h1.u,h2.u, h3.u {
@@ -151,15 +155,15 @@ li.dotted a {
 }
 
 
-.pure-g [class*=pure-u] {
+body, .pure-g [class*=pure-u] {
   font-family: serif; 
-  font-size: 1.25em; 
+  font-size: 1.15em; 
   letter-spacing: 0.4px; 
 }
 @media screen and (max-width: 535px) {
-  .pure-g [class*=pure-u] {
+  body, .pure-g [class*=pure-u] {
     font-family: serif; 
-    font-size: 1.2em; 
+    font-size: 1.09em; 
     letter-spacing: 0px; 
   }
   .toc-date {
