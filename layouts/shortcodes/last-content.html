@@ -1,0 +1,2 @@
+{{ $n := .Site.GetPage (.Get 0) }}
+{{ (index $n.Pages 0).Content }}

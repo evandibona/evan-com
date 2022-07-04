@@ -1,17 +1,35 @@
+{{$date := "no date?"   }}
+{{$df   := "Jan 2, 2006"}}
+{{$pgs  :=  slice       }}
+{{$fd   := .File.Dir    }}
+
+{{range .Site.Pages}}
+  {{if in .File.Path $fd}}
+    {{$pgs = $pgs | append .}}
+  {{end}}
+{{end}}
+{{$pgs = sort $pgs "Date" "desc" }}
+
+{{if and (eq .Kind "section") (gt (len .Pages) 0)}}
+  {{$date = dateFormat $df (index $pgs 0).Date}}
+{{else}}
+  {{$date = dateFormat $df .Date}}
+{{end}}
+<!--{{ (index .Pages 0).Content }} -->
 <div class="header">
 {{if eq .Type "u"}}
     <h2 class="u me">
       <a href="/u" class="n">Evan DiBona</a>
     </h2>
     <h2 class="u date">
-        {{dateFormat "Jan 2, 2006" .Date}}
+      {{$date}}
     </h2>
 {{else}}
     <h2 class="v me">
       <a href="/v" class="n">Evan Charles DiBona</a>
     </h2>
     <h2 class="v date">
-        {{dateFormat "Jan 2, 2006" .Date}}
+      {{$date}}
     </h2>
 {{end}}
 </div>

@@ -116,6 +116,22 @@ div.header h1,h2,h3 {
 div.title h1 {
   text-align: center; 
 }
+h1.ntry-h, h2.ntry-h {
+  margin: 0; 
+}
+h1.ntry-h {
+  font-size: 2em; 
+  margin-top: 2em; 
+  border-bottom: 1px solid #000; 
+  width: 50%; 
+  margin: 1.5em auto; 
+  padding-bottom:0.25em; 
+  margin-bottom: 0.25em; 
+}
+h2.ntry-h {
+  margin-bottom: 1em; 
+  font-size: 1.5em; 
+}
 .ln-title {
   margin: 1em 0; 
   border-bottom: 1.5px solid #6B585260;
@@ -186,6 +202,9 @@ body, .pure-g [class*=pure-u] {
 }
 
 .toc .flex { flex: 1 0; }
+.toc a {
+  text-decoration: underline; 
+}
 .toc li.dotted a { 
   background: none; 
   flex: 1 1;
