@@ -1,13 +1,16 @@
 {{define "main"}}
   <div class="pure-g">
     <div class="pure-u-1 center">
-      <h1 class="ntry-h"> Evan DiBona   </h1>
-      <h2 class="ntry-h"> Notary Public </h2>
+      <h1 class="ntry-h">
+        {{(.GetPage (path.Join "/" .Section)).Params.name}}
+      </h1>
+      <h2 class="ntry-h">{{.Page.Title}}</h2>
     </div>
   </div>
   <div class="pure-g">  
     <div class="pure-u-1 c">
     </div>
+
     <div class="pure-u-1 ln-title">
       <h2>{{(.GetPage "/u/about").Title}}</h2>
     </div>
@@ -26,16 +29,18 @@
       </div>
       {{(.GetPage "/u/about").Content}}
     </div>
+
     <div class="pure-u-1 ln-title">
-      <h2>{{(.GetPage "/u/ntry/2").Title}}</h2>
+      <h2>{{(.GetPage "2").Title}}</h2>
     </div>
     <div class="pure-u-1
                 pure-u-sm-1-6 pure-u-md-1-3 pure-u-lg-5-12">
     </div>
     <div class="article pure-u-1 
                 pure-u-sm-5-6 pure-u-md-2-3 pure-u-lg-7-12">
-      {{(.GetPage "/u/ntry/2").Content}}
+      {{(.GetPage "2").Content}}
     </div>
+
     <div class="pure-u-1 ln-title">
       <h2>{{(.GetPage "/u/ntry/8").Title}}</h2>
     </div>
@@ -46,20 +51,45 @@
                 pure-u-sm-5-6 pure-u-md-2-3 pure-u-lg-7-12">
       {{(.GetPage "/u/ntry/8").Content}}
     </div>
+
     <div class="pure-u-1 ln-title">
-      <h2>{{(.GetPage "/u/ntry/9").Title}}</h2>
+      <h2>{{(.GetPage "9").Title}}</h2>
     </div>
     <div class="pure-u-1
                 pure-u-sm-1-6 pure-u-md-1-3 pure-u-lg-5-12">
     </div>
     <div class="article pure-u-1 
                 pure-u-sm-5-6 pure-u-md-2-3 pure-u-lg-7-12">
-      {{(.GetPage "/u/ntry/9").Content}}
-      <div class=" c center">
-        <h3> Phone & Email </h3>
-        {{partial "contact" .}}
-      </div>
+      {{(.GetPage "9").Content}}
+    </div>
+
+    <div class="pure-u-1 ln-title">
+      <h2>Phone & Email</h2>
+    </div>
+    <div class="pure-u-1
+                pure-u-sm-1-6 pure-u-md-1-3 pure-u-lg-5-12">
+    </div>
+    <div class="article pure-u-1 
+                pure-u-sm-4-6 pure-u-md-2-3 pure-u-lg-7-12">
+      {{partial "contact" .}}
+    </div>
+
+    <div class="pure-u-1 ln-title">
+      <h2>Index</h2>
+    </div>
+    <div class="pure-u-1
+                pure-u-sm-1-6 pure-u-md-1-3 pure-u-lg-5-12">
+    </div>
+    <div class="saus-links pure-u-1 
+                pure-u-sm-4-6 pure-u-md-2-3 pure-u-lg-7-12">
+      {{range .Pages}}
+        <a href="{{.RelPermalink}}">
+          <span class="saus-link">
+            {{.LinkTitle}}
+          </span>
+          <span class="h-spacer"></span>
+        </a>
+      {{end}}
     </div>
   </div>
-
 {{end}}
