@@ -206,6 +206,7 @@ body, .pure-g [class*=pure-u] {
   text-decoration: underline; 
 }
 .toc li.dotted a { 
+  text-decoration: none; 
   background: none; 
   flex: 1 1;
 }
