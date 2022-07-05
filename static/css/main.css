@@ -7,6 +7,10 @@
 
 
 /*** LAYOUT ***/
+::selection {
+  color: #F6F0E7;
+  background: #8CBBBD; 
+}
 body {
   background: #F6F0E7;
   color: #6B5852;
@@ -23,6 +27,12 @@ body {
 
 .spacer   { height: 5em; }
 .h-spacer { padding-right: 0.5em; }
+
+figcaption {
+  font-style: italic; 
+  font-size: 0.92em;
+  text-align: center; 
+}
 
 /*** FONTS ***/
 
@@ -50,8 +60,17 @@ h3 { font-size: 1.1em }
 #splash a {  }
 #splash .header { border-bottom: 1px solid gray; }
 
-bq.splash {   font-size: 1.25em; }
-bq.splash i { font-size: 0.95em; }
+/*** BLOCK QUOTES ***/
+
+.splash p {   font-size: 1.25em; }
+.splash p i { font-size: 0.95em; }
+blockquote { 
+  background: #eee6de90; 
+  padding: 0.1em 1.25em; 
+  margin: 0.9em 0.75em; 
+  border-top:    3px solid #6B585240;
+  border-bottom: 3px solid #6B585240;
+}
 
 img {
   mix-blend-mode: darken; 
@@ -91,6 +110,10 @@ span.saus-link {
   font-family: sans-serif; 
   font-size: 0.9em; 
   white-space: nowrap; 
+}
+span.saus-link:hover {
+  background: #6B5852A0; 
+  color:      #F6F0E7; 
 }
 span.saus-link a {
 }
@@ -169,17 +192,27 @@ h1.v, h2.v, h3.v {
 }
 
 .toc ul { list-style-type: none; }
+.toc li a { 
+  text-decoration: none; 
+  padding-bottom: 0.1em; 
+  padding-left: 0.25em; 
+  border-bottom: 1px solid #6B5852;
+}
+.toc li {
+  line-height: 1.95em; 
+}
 
 /* csslayout.io/dot-leader/ */
 .toc ul li.dotted { 
-  width: 80%; 
-  margin: 0 0 0.75em 0;
+  width: 85%; 
+  margin: 0 0 0.25em 0;
   border-bottom: 1px dashed black; 
   font-weight: 600; 
 }
 li.dotted a {
   display: inline-block; 
   width: 100%; 
+  border-bottom: none; 
 }
 .toc-date {
   display: inline-block; 
@@ -190,18 +223,24 @@ li.dotted a {
 }
 .toc-file {
   float: right; 
+  padding-right: 0.5em; 
 }
 
 
 body, .pure-g [class*=pure-u] {
   font-family: serif; 
-  font-size: 1.15em; 
+  font-size: 19px; 
   letter-spacing: 0.4px; 
+}
+@media screen and (min-width: 920px) {
+  body, .pure-g [class*=pure-u] {
+    font-size: 21px; 
+  }
 }
 @media screen and (max-width: 535px) {
   body, .pure-g [class*=pure-u] {
     font-family: serif; 
-    font-size: 1.09em; 
+    font-size: 18px; 
     letter-spacing: 0px; 
   }
   .toc-date {
@@ -221,6 +260,10 @@ body, .pure-g [class*=pure-u] {
     content: "... "
   }
   .article { padding: 0; }
+  blockquote { 
+    padding: 0.1em 1.25em; 
+    margin: 0.5em 0.25em; 
+  }
 }
 
 .toc .flex { flex: 1 0; }
@@ -228,6 +271,7 @@ body, .pure-g [class*=pure-u] {
   text-decoration: underline; 
 }
 .toc li.dotted a { 
+  line-height: 1em; 
   text-decoration: none; 
   background: none; 
   flex: 1 1;

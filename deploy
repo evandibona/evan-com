@@ -1,4 +1,5 @@
 #!/bin/sh
 
+echo "\n" >> log
 date >> log
 /usr/local/bin/hugo >> log && /usr/bin/rsync -avz --delete-after public/* edibona_evan@ssh.phx.nearlyfreespeech.net:/home/public/. >> log

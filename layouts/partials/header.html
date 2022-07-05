@@ -17,22 +17,32 @@
 {{end}}
 <!--{{ (index .Pages 0).Content }} -->
 <div class="header">
+  {{$hl := path.Join "/" .Page.Type}}
 {{if eq .Type "u"}}
+{{if eq .File.Dir "u/"}}
+  {{$hl = "/"}} 
+  {{end}}
     <h2 class="u me">
-      <a href="/u" class="n">Evan DiBona</a>
+      <a href="{{$hl}}" class="n">Evan DiBona</a>
     </h2>
     <h2 class="u date">
       {{$date}}
     </h2>
 {{else}}
     <h2 class="v me">
-      <a href="/v" class="n">Evan Charles DiBona</a>
+      <a href="{{$hl}}" class="n">Evan Charles DiBona</a>
     </h2>
     <h2 class="v date">
       {{$date}}
     </h2>
 {{end}}
 </div>
+
+{{if .Page.Params.draft}}
+  <hr>
+  <p class="center c"> D R A F T </p>
+  <hr>
+{{end}}
 
 {{if in .Permalink "/now/"}}
 {{else}}
