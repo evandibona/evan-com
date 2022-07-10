@@ -1,0 +1,9 @@
+<!-- Traveling Document Services -->
+<!-- $0.57 per mile, $15 an hour -->
+
+  <!--      maxfee * 100   tap $/h    m-rate -->
+    <em>
+      {{div (math.Floor (div (mul 500 (div 6. 15)) 0.57)) 100}}
+      miles
+    </em>
+  <!-- Miles I can travel for max fee -->
