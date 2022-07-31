@@ -7,5 +7,17 @@
       {{end}}
     </div>
   {{end}}
+  <div class="pure-g">  
+    {{range first 5 (sort site.RegularPages "Date" "desc")}}
+      <div class="pure-u-1 m-s"> </div>
+      <div class="pure-u-1">
+        <a href="{{.RelPermalink}}">
+          <blockquote>
+            <br>{{.Summary}}
+            <div class="m-s"></div>
+          </blockquote>
+        </a>
+      </div>
+    {{end}}
+  </div>
 {{end}}
-

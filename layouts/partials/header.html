@@ -47,6 +47,13 @@
 {{if in .Permalink "/now/"}}
 {{else}}
   <div class="title">
-      <h1> {{.Title}} </h1>
+    <h1> {{.Title}} </h1>
+    {{if eq .Kind "page"}}
+      {{if in .File.Path "/lglr/"}}
+        <img class="pure-img underline" src="/img/div1.png">
+      {{else if in .File.Path "/lbry/"}}
+        <img class="pure-img underline" src="/img/div2.png">
+      {{end}}
+    {{end}}
   </div>
 {{end}}

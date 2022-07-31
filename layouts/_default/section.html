@@ -8,7 +8,11 @@
     {{if lt (len .File.Dir) 3}}
       <!-- Alphabetical -->
       {{range .Pages.ByDate.Reverse}}
-        <li><b><a href="{{.RelPermalink}}">{{.Title}}</a></b></li>
+        {{if in .File.Path "_index"}}
+          <li><b>
+            <a href="{{.RelPermalink}}">{{.Title}}</a>
+          </b></li>
+        {{end}}
       {{end}}
     {{else}}
       <!-- Reverse Numeric -->
